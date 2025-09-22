@@ -1,0 +1,208 @@
+/* Variables CSS */
+:root {
+    --color-dark: #0a0a0a;
+    --color-neon-green: #39ff14;
+    --color-electric-blue: #00ffff;
+    --glow-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+/* Estilos Generales */
+body {
+    background-color: var(--color-dark);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.bg-darker {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Efectos de Texto Neón */
+.glow-text {
+    color: var(--color-neon-green);
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+/* Navbar Personalizado */
+.navbar {
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-neon-green) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Matrix Animation Background */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Secciones */
+.section-padding {
+    padding: 100px 0;
+}
+
+/* Cards de Juegos */
+.game-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--color-neon-green);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+}
+
+.game-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Setup List */
+.setup-list .list-group-item {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--color-neon-green);
+    color: #fff;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.setup-list .list-group-item:hover {
+    transform: translateX(10px);
+    border-color: var(--color-electric-blue);
+}
+
+/* Streamer Cards */
+.streamer-card {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.streamer-card:hover {
+    transform: translateY(-10px);
+}
+
+.streamer-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Tip Cards */
+.tip-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--color-neon-green);
+    border-radius: 15px;
+    padding: 25px;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+}
+
+.tip-card i {
+    color: var(--color-neon-green);
+    margin-bottom: 15px;
+}
+
+/* Botones Personalizados */
+.btn-outline-neon {
+    color: var(--color-neon-green);
+    border: 2px solid var(--color-neon-green);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-neon:hover {
+    background: var(--color-neon-green);
+    color: var(--color-dark);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+}
+
+.btn-discord {
+    background: #7289da;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-discord:hover {
+    background: #5c73c7;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(114, 137, 218, 0.5);
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid var(--color-neon-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh;
+    }
+    
+    .section-padding {
+        padding: 60px 0;
+    }
+    
+    .game-card img {
+        height: 150px;
+    }
+}
+
+/* Animaciones */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(57, 255, 20, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+    }
+}
